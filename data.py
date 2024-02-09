@@ -1,0 +1,131 @@
+class OgameData:
+    def __init__(self, data) -> None:
+        self.resource_buildings_data = data.get("resource_buildings_data", {})
+        self.life_forms_buildings_data = data.get("life_forms_buildings_data", {})
+        self.life_forms_techs_data = data.get("life_forms_techs_data", {})
+        self.research_data = data.get("research_data", {})
+        self.universe_data = data.get("universe_data", {})
+        self.account_data = data.get("account_data", {})
+        self.facilities_data = data.get("facilities_data", {})
+        self.planet_settings = data.get("planet_settings", {})
+
+
+ogame_data_dict = {
+    "resource_buildings_data": {
+        "Mina de metal": 35,
+        "Mina de cristal": 28,
+        "Sintetizador de deuterio": 30,
+        "Planta de energía solar": 10,
+        "Planta de fusión": 0,
+        "Satélite solar": 1_032,
+        "Almacén de metal": 18,
+        "Almacén de cristal": 18,
+        "Contenedor de deuterio": 16,
+        "Taladrador": 0,
+    },
+    "life_forms_buildings_data": {
+        "rocktal": {
+            "Enclave de Meditación": 51,
+            "Cultivo de Cristales": 52,
+            "Politécnico Rúnico": 14,
+            "Forja Rúnica": 10,
+            "Orictorium": 0,
+            "Fundición de magma": 0,
+            "Cámara de Disrupción": 0,
+            "Litomonumento": 10,
+            "Refinería de Cristal": 4,
+            "Sintonizador de Deuterio": 6,
+            "Centro de Investigación de Minerales": 0,
+            "Planta de Reciclado de Alto Rendimiento": 0,
+        },
+        "humans": {},
+        "kaelesh": {},
+        "mechas": {"Transformador de alto rendimiento": 0},
+    },
+    "life_forms_techs_data": {
+        "Tier 1": {
+            "Embajador intergaláctico": 10,
+            "Extractores de gran capacidad": 5,
+            "Sistemas de bombeo de alta energía": 4,
+            "Rayo tractor telequinético": 8,
+            "Tecnología de sensores mejorada": 9,
+            "Vías de transporte automatizadas": 3,
+        },
+        "Tier 2": {
+            "Sondeo de profundidad": 2,
+            "Tecnologías de explotación mejoradas": 1,
+            "Stellarator mejorado": 0,
+            "Broca de diamante endurecido": 1,
+            "Sexto sentido": 5,
+            "Psicoarmonizador": 2,
+        },
+        "Tier 3": {},
+    },
+    "research_data": {
+        "Tecnología de energía": 5,
+        "Tecnología láser": 12,
+        "Tecnología iónica": 6,
+        "Tecnología de hiperespacio": 11,
+        "Tecnología de plasma": 12,
+        "Motor de combustión": 14,
+        "Motor de impulso": 13,
+        "Motor de hiperespacial": 10,
+        "Tecnología de espionaje": 13,
+        "Tecnología de computación": 16,
+        "Astrofísica": 15,
+        "Red de investigación intergaláctica": 7,
+        "Tecnología de gravitón": 1,
+        "Tecnología militar": 13,
+        "Tecnología de defensa": 14,
+        "Tecnología de blindaje": 16,
+    },
+    "universe_data": {
+        "name": "Undae",
+        "id": "s199",
+        "flag": "es",
+        "fleet_debris": 0.6,
+        "deuterium_debris": False,
+        "deuterium_bonus": 0.7,
+        "defenders_speed": 1,
+        "peacefull_speed": 4,
+        "war_speed": 1,
+        "empty_systems": True,
+        "inactive_systems": True,
+        "galaxy_count": 5,
+        "planet_field_bonus": 30,
+        "development_speed": 6,
+        "exploration_speed": 6,
+        "solar_systems_count": 499,
+        "galaxies_circular": True,
+        "solar_systems_circular": True,
+    },
+    "account_data": {
+        "user": "Kalume",
+        "password": None,
+        "account_class": "Discover",
+        "admiral": True,
+        "engineer": True,
+        "geologist": True,
+        "technocrat": True,
+        "commander": True,
+        "planets": 1,
+    },
+    "facilities_data": {
+        "Fábrica de robots": 15,
+        "Hangar": 15,
+        "Laboratorio de investigación": 15,
+        "Depósito de la alianza": 0,
+        "Silo": 10,
+        "Fábrica de nanobots": 6,
+        "Terraformer": 0,
+        "Astillero orbital": 0,
+    },
+    "planet_settings": {
+        "name": "Planet A",
+        "max_fields": 298,
+        "min_temp": -6,
+        "max_temp": 34,
+        "position": [5, 436, 8],
+        "life_form": "rocktal",
+    },
+}
