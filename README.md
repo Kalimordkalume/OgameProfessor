@@ -1,2 +1,2 @@
 # OgameProfessor
-App for the web browser called Ogame for giving calculation tools and other features.
+App for the web browser game called Ogame providing calculation tools and other features.
