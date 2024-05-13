@@ -6,6 +6,9 @@ Feel free to post any issue and ask for features.
 
 ----SETUP----
 
+-Requirements.-
+Python 3.12.
+
 For new devs:
     1.- Clone the repository:
         `mkdir OgameProfessor && cd OgameProfessor`
