@@ -1,0 +1,74 @@
+{
+    "workbench.editor.autoLockGroups": {
+      "default": true
+    },
+    "workbench.editorAssociations": {
+      "*.node": "default"
+    },
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.minimap.enabled": false,
+    "files.associations": {
+      "*.txt": "txt",
+      "*.html": "html"
+    },
+    "[python]": {
+      "editor.formatOnType": true,
+      "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "notebook.lineNumbers": "on",
+    "workbench.startupEditor": "none",
+    "editor.guides.bracketPairs": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "[django-html]": {
+      "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+      },
+      "editor.defaultFormatter": "monosans.djlint"
+    },
+    "html.format.templating": true,
+    "git.ignoreRebaseWarning": true,
+    "git.enableSmartCommit": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "editor.formatOnSave": true,
+    "emmet.preferences": {},
+    "emmet.syntaxProfiles": {},
+    "prettier.proseWrap": "always",
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editor.empty.hint": "hidden",
+    "mssql.enableQueryHistoryCapture": true,
+    "remote.autoForwardPortsSource": "hybrid",
+    "[toml]": {
+      "editor.defaultFormatter": "tamasfe.even-better-toml"
+    },
+    "evenBetterToml.rules": [],
+    "gitlens.gitCommands.skipConfirmations": [
+      "fetch:command",
+      "stash-push:command",
+      "switch:command"
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/.git": true, // Puedes incluir esto si también quieres ocultar el directorio .git
+      "**/.svn": true, // Puedes incluir esto si también quieres ocultar el directorio .svn
+      "**/.hg": true // Puedes incluir esto si también quieres ocultar el directorio .hg
+    },
+    "gitlens.advanced.messages": {
+      "suppressCreatePullRequestPrompt": true
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.statusBar.visible": false,
+    "workbench.sideBar.location": "right",
+    "workbench.colorTheme": "Shades of Purple (Super Dark)",
+    "settingsSync.ignoredExtensions": []
+  }
