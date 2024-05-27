@@ -1,5 +1,3 @@
-from database import data
-
 class Account:
     """This class will represent the structure of the player account."""
 
@@ -12,8 +10,3 @@ class Account:
         self.is_technocrat: bool = None
         self.is_geologist: bool = None
         self.is_admiral: bool = None
-
-    def gather_account_data(self):
-        ...
-
-    
