@@ -1,7 +1,8 @@
 from django.urls import path
 
-from .views import landing_page
+from .views import EmpireSettingsView, landing_page
 
 urlpatterns = [
     path("", landing_page, name="landing_page"),
+    path("empire_settings", EmpireSettingsView.as_view(), name="empire_page"),
 ]
