@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static '/styles.css' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen bg-slate-900 text-slate-50 text-base m-heigh">
+    <header id="header shadow-lg h-10">
+        {% block header %}
+        <nav class="bg-slate-800 p-4">
+            <ul class="flex space-x-4">
+                <li>
+                    <a href="#" class="text-white hover:text-gray-400">Welcome</a>
+                </li>
+                <li>
+                    <a href="{% url 'empire_page' %}" class="text-white hover:text-gray-400">Empire Settings</a>
+                </li>
+                <li>
+                    <a href="#" class="text-white hover:text-gray-400">Empire Calculations</a>
+                </li>
+                <li>
+                    <a href="#" class="text-white hover:text-gray-400">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        {% endblock header%}
+    </header>
+
+    <main id="main">
+        {% block main %}
+        {% endblock main %}
+    </main>
+    <footer id="footer">
+        {% block footer %}
+        {% endblock footer %}
+    </footer>
+</body>
+</html>
