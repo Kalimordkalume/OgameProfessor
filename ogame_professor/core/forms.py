@@ -9,11 +9,11 @@ class AccountCharacteristicsForm(forms.Form):
         widget=forms.NumberInput(
             attrs={
                 "class": "bg-slate-600",
-                "placeholder": "1, 2, 3, ...",
             }
         ),
         required=True,
     )
+
     player_class = forms.ChoiceField(
         choices=[
             ("none", "None"),
@@ -46,7 +46,15 @@ class AccountCharacteristicsForm(forms.Form):
 
 class PlanetCharacteristicsForm(forms.Form):
     # Planet Characteristics
-    planet_name = forms.CharField(label="Planet Name", max_length=100)
+    planet_name = forms.CharField(
+        label="Planet Name",
+        max_length=100,
+        widget=forms.NumberInput(
+            attrs={
+                "class": "bg-slate-600",
+            }
+        ),
+    )
     planet_temperature = forms.IntegerField(
         label="Temperature", min_value=-130, max_value=260
     )
