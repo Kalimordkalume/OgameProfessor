@@ -76,8 +76,12 @@ WSGI_APPLICATION = "ogame_professor.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "ogame_profesor",
+        "USER": "postgres",
+        "PASSWORD": "waybopeN46",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 

@@ -39,3 +39,9 @@ class EmpireSettingsView(FormView):
 
 def landing_page(request):
     return render(request, template_name="core/landing_page.html")
+
+
+def index_view(request):
+    visitor = request.session.keys()
+    context = {"visitante": visitor}
+    return render(request, template_name="core/index.html", context=context)
