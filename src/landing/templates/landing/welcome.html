@@ -1,0 +1,41 @@
+{% extends "empire/skeleton.html" %}
+
+{% block title %}
+Welcome - Ogame ROI Calculator and Imperial Manager
+{% endblock title %}
+{% block main %}
+<main class="container mx-auto mt-6 p-4">
+    <section class="text-center lg:text-left">
+        <h2 class="text-3xl lg:text-4xl font-semibold mb-4 text-indigo-200">Maximize Your Efficiency</h2>
+        <p class="mb-8 text-lg text-indigo-300">Use our tools to calculate your ROI and simulate various scenarios to enhance your gameplay.</p>
+    </section>
+
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl lg:text-2xl font-semibold mb-3 text-indigo-200">ROI Calculator</h3>
+            <p class="text-base lg:text-lg text-indigo-300">Determine the return on investment for your resources.</p>
+        </div>
+        <div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl lg:text-2xl font-semibold mb-3 text-indigo-200">Simulation Tools</h3>
+            <p class="text-base lg:text-lg text-indigo-300">Run different scenarios to optimize your strategy.</p>
+        </div>
+        <div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl lg:text-2xl font-semibold mb-3 text-indigo-200">Imperial Manager</h3>
+            <p class="text-base lg:text-lg text-indigo-300">Manage your empire efficiently.</p>
+        </div>
+    </section>
+
+    <section class="mt-8 text-center lg:text-center bg-slate-700 p-6 rounded-lg shadow-lg flex flex-col" >
+            <h3 class="text-xl lg:text-3xl font-bold mb-4 text-indigo-200 lg:text-center">Get Started</h3>
+            <p class="mb-6 text-base lg:text-lg text-indigo-300 lg:text-center">Feel free to explore the tools as you need. We recommend you to start by setting up your empire.</p>
+            <div><a href="{% url "empire:empire_settings" %}" class="bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-500 transition duration-300 shadow-lg lg:text-center">Set Up Your Empire</a></div>
+    </section>
+
+    <section class="mt-8 text-center lg:text-center">
+        <h3 class="text-xl lg:text-3xl font-bold mb-4 text-purple-200">Explore More</h3>
+        <p class="mb-6 text-base lg:text-lg text-purple-300">Check out additional features and resources.</p>
+        <a href="#" class="bg-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-500 transition duration-300 shadow-lg">Learn More</a>
+    </section>
+{% endblock main %}
+
+

@@ -1,0 +1,61 @@
+{% extends "empire/skeleton.html" %}
+{% block title %}Settings - Ogame ROI Calculator and Imperial Manager{% endblock title %}
+
+{% block main %}
+<main class="container mx-auto mt-6 p-4">
+
+    <!-- Start of informative section -->
+    <section class="text-center lg:text-left mb-8">
+        <h2 class="text-3xl lg:text-4xl font-semibold mb-4 text-indigo-200">Configure Your Planets</h2>
+        <p class="mb-8 text-lg text-indigo-300">Fill in the details of your planets to optimize your empire's management.</p>
+    </section>
+    <!-- End of informative section -->
+
+    {% if success_message %}
+    <section class="bg-green-500 text-white p-4 rounded-lg mb-6">
+        {{ success_message }}
+    </section>
+    {% endif %}
+
+    <div class="grid grid-cols-1 gap-8">
+        <form action="" method="post" class="space-y-8">
+            {% csrf_token %}
+            <section class="bg-slate-700 rounded-lg p-6 shadow-lg space-y-6">
+                <h3 class="text-xl lg:text-2xl font-semibold text-indigo-200">Account Settings</h3>
+                <div class="space-y-4">
+                    {% for field in account_form %}
+                    <div class="flex flex-col space-y-1">
+                        {{ field.label_tag }}
+                        {{ field }}
+                        {% if field.help_text %}
+                        <p class="text-sm text-gray-400">{{ field.help_text }}</p>
+                        {% endif %}
+                        {% for error in field.errors %}
+                        <p class="text-sm text-red-500">{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- Start of planets section -->
+            <section class="bg-slate-700 rounded-lg p-6 shadow-lg space-y-6">
+                <h3 class="text-xl lg:text-2xl font-semibold text-indigo-200 text-center w-100">Planet Settings</h3>
+                {% include "empire/planet_formset.html" %}
+                <div class="text-center">
+                    <button name="action" type="submit" value="add_planet" class="block w-40 bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-500 transition duration-300 shadow-lg">Add Planet</button>
+                </div>
+            </section>
+            <!-- End of planets section -->
+            <div class="text-right mt-4">
+                <button name="action" type="submit" value="save_settings" class="bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-500 transition duration-300 shadow-lg">Save All Settings</button>
+            </div>
+        </form>
+    </div>
+
+
+    {% if planet %}
+        {{planet.planet_name}}
+    {% endif %}
+</main>
+{% endblock main %}

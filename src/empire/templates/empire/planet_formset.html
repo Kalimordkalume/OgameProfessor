@@ -1,0 +1,12 @@
+<div class="space-y-6">
+    {{formset.management_form}}
+    {% for form in formset %}
+    <div class="bg-slate-800 p-4 rounded-lg shadow-md">
+        <h4 class="text-lg font-semibold text-indigo-200 mb-2">Planet {{ forloop.counter }}</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {{form}}
+        </div>
+
+    </div>                             
+    {% endfor %}
+</div>       

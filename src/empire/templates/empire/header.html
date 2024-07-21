@@ -1,0 +1,40 @@
+<header class="bg-slate-800 shadow-lg">
+    <nav class="container mx-auto p-4 flex items-center justify-between">
+        <div class="text-white text-lg font-bold">
+            <a href="#" class="hover:text-indigo-500 transition duration-300">Ogame Manager</a>
+        </div>
+        <ul class="hidden lg:flex lg:space-x-4">
+            <li>
+                <a href="{% url 'landing:welcome_page' %}" class="text-indigo-300 hover:text-indigo-500 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">Welcome</a>
+            </li>
+            <li>
+                <a href="{% url "empire:empire_settings" %}" class="text-indigo-300 hover:text-indigo-500 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">Empire Settings</a>
+            </li>
+            <li>
+                <a href="{% url "empire:empire_settings" %}" class="text-indigo-300 hover:text-indigo-500 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">Your Empire</a>
+            </li>
+            <li>
+                <a href="#" class="text-indigo-300 hover:text-indigo-500 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">Empire Calculations</a>
+            </li>
+            <li>
+                <a href="#" class="text-indigo-300 hover:text-indigo-500 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">Contact</a>
+            </li>
+            {% if user.is_authenticated %}
+                <li>
+                    <a href="{% url 'empire:logout' %}" class="text-red-300 hover:text-red-500 transition duration-300 focus:outline-none focus:ring-2 focus:ring-red-500">Logout</a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="{% url 'empire:login' %}" class="text-green-300 hover:text-green-500 transition duration-300 focus:outline-none focus:ring-2 focus:ring-green-500">Login</a>
+                </li>
+            {% endif %}
+        </ul>
+        <div class="lg:hidden">
+            <button class="text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+</header>

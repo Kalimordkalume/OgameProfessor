@@ -1,0 +1,21 @@
+<!-- templates/empire/empire_view.html -->
+{% extends "empire/skeleton.html" %}
+{% block title %}Empire - Ogame ROI Calculator and Imperial Manager{% endblock title %}
+
+{% block main %}
+<main class="container mx-auto mt-6 p-4">
+    <section class="text-center lg:text-left mb-8">
+        <h2 class="text-3xl lg:text-4xl font-semibold mb-4 text-indigo-200">Your Empire</h2>
+        <p class="mb-8 text-lg text-indigo-300">Manage your empire effectively.</p>
+    </section>
+
+    <section class="space-y-6">
+        {% for planet in planets %}
+        <div class="bg-slate-700 rounded-lg p-6 shadow-lg space-y-2">
+            <h3 class="text-xl lg:text-2xl font-semibold text-indigo-200">{{ planet.planet_name }}</h3>
+            <a href="{% url 'empire:planet_detail'planet.pk %}" class="text-indigo-400 hover:text-indigo-600">View Details</a>
+        </div>
+        {% endfor %}
+    </section>
+</main>
+{% endblock main %}
